@@ -21,6 +21,8 @@ class ChartOrders extends Component
     {
         $this->thisYearOrders = Order::getYearOrders($this->selectedYear)->groupByMonth();
         $this->lastYearOrders = Order::getYearOrders($this->selectedYear - 1)->groupByMonth();
+
+        $this->emit('updateTheChart');
     }
 
     public function render()
