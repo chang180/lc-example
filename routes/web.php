@@ -26,3 +26,8 @@ Route::get('/charts', function () {
 Route::get('/stats', function () {
     return view('stats');
 });
+
+Route::get('/announcement', function () {
+    
+    return view('announcement');
+});
